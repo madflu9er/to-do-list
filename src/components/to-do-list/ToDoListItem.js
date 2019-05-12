@@ -119,8 +119,6 @@ class ToDoListItem extends Component {
             <div className="edit-block">
               <textarea
                 className="edit-block-input"
-                autoFocus
-                type="text"
                 onFocus={this.onFocus}
                 onBlur={this.onBlur}
                 onKeyPress={this.handleKeyPress}
@@ -131,13 +129,14 @@ class ToDoListItem extends Component {
             </div>
           )
             : (
-              <div
+              <button
+                type="submit"
                 onClick={() => this.setState({ editable: true })}
                 className={filterState === "done" ? "to-do-item-default-text todo-done"
                   : "to-do-item-default-text"}
               >
                 {text}
-              </div>
+              </button>
             )}
         </div>
         <div className="to-do-item-buttons">

@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = ({ name, onClick, className, isDisable }) => <button disabled={isDisable} type="button" className={className} onClick={onClick}>{name}</button>;
+const Button = ({ name, onClick, className, isDisable }) => (
+  <button
+    disabled={isDisable}
+    type="button"
+    className={className}
+    onClick={onClick}
+  >
+    {name}
+  </button>
+);
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
@@ -11,9 +20,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  onClick: () => {
-    alert("The is no active function");
-  },
+  onClick: () => {},
   isDisable: false
 };
 export default Button;
