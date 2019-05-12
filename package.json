@@ -6,8 +6,8 @@
   "private": true,
   "author": "Sednor Holdings Limited",
   "contributors": [
-    "Nikita Usatenko",
-    "Vladimir Maklyakov"
+    "Honcharenko",
+    "Ilchyshen"
   ],
   "license": "ISC",
   "homepage": "https://bitbucket.org/vladimir_maklyakov/react-test-project#readme",
@@ -18,7 +18,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node app.js",
-    "client": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
