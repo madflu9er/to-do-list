@@ -129,14 +129,13 @@ class ToDoListItem extends Component {
             </div>
           )
             : (
-              <button
-                type="submit"
+              <div
                 onClick={() => this.setState({ editable: true })}
                 className={filterState === "done" ? "to-do-item-default-text todo-done"
                   : "to-do-item-default-text"}
               >
                 {text}
-              </button>
+              </div>
             )}
         </div>
         <div className="to-do-item-buttons">
