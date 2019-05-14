@@ -26,6 +26,7 @@ class ToDoListPage extends Component {
     const todoItem = {
       id: todos.length + 1,
       text: todoText,
+      infoState: false,
       editable: false,
       filterState: "active"
     };
@@ -87,10 +88,31 @@ class ToDoListPage extends Component {
   };
 
   render() {
-    const { title, todos, todoText, sortFilter, isDisabled } = this.state;
+    const { title, todos, todoText, sortFilter, isDisabled, infoState } = this.state;
 
     return (
       <div className="to-do-list-page">
+        <div className="about-button-wrapper">
+          <button
+            type="submit"
+            className="about-button"
+            onClick={() => { this.setState({ infoState: true }); }}
+          >
+            <i className="fas fa-info fa-2x" />
+          </button>
+        </div>
+        <div className={infoState ? "info-block" : "info-block-hidden"}>
+          <div>
+            ITKNU 17-1 Goncharenko, Ilchyshen
+          </div>
+          <button
+            type="submit"
+            onClick={() => { this.setState({ infoState: false }); }}
+            value="Close"
+          >
+            Close
+          </button>
+        </div>
         <h1 className="welcome">{title}</h1>
         <div id="addblock" className="add-block">
           <input

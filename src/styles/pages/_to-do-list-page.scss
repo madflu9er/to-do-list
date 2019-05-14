@@ -10,6 +10,47 @@
   box-shadow: 0px 10px 15px 3px #ccc;
 }
 
+.about-button {
+  width: 80%;
+  height: 80%;
+  background: transparent;
+  border: 2px solid #d8cfc4;
+  color: #d8cfc4;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.info-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ccccccd1;
+  z-index: 5;
+  flex-direction: column;
+}
+
+.info-block-hidden {
+  display: none;
+}
+
+.about-button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #8a9ae0;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .todo-done {
   text-decoration: line-through;
 }
